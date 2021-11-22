@@ -1,0 +1,4 @@
+//analyze and comment on the performance of the UDF function. How the performance could be improved
+
+UDF function implemented in ether Scala or Python are slower then native Spark-SQL function, as Spark does not try to optimize them as it sees them as black box.
+So for the html tag cleaning i will implement it using a scala.xml.XML.loadString(str).text as this is better command for valid html, as it is better then clean up the html tag using a pure regex and go one by one.
